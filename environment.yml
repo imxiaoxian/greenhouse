@@ -1,0 +1,49 @@
+name: greenhouse
+# ============================================================
+# 智慧大棚管理系统 Conda 环境规范
+# ============================================================
+# 推荐使用项目内的 setup.ps1 一键初始化（会克隆现有 langchain
+# 环境加速，并把 .conda-env 放进项目目录以规避沙盒/权限问题）。
+#
+# 如需从零创建：
+#   conda env create -f environment.yml
+#   conda activate greenhouse
+#
+# 注意：conda 默认 classic 求解器对 langchain 生态求解较慢，
+# 建议改用 libmamba 求解器：
+#   conda config --set solver libmamba
+# ============================================================
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ===== Python =====
+  - python=3.11
+  - pip>=24.0
+
+  # ===== 通过 conda 安装的系统级依赖 =====
+  - pandas>=2.3.3
+  - openpyxl>=3.1.5
+  - requests>=2.32.3
+  - python-dotenv>=1.0.1
+
+  # ===== 通过 pip 安装（conda 未提供或版本更新更快）=====
+  - pip:
+      # LangGraph 与 LangChain 生态
+      - langgraph>=1.2.9
+      - langchain>=1.3.13
+      - langchain-core>=1.4.9
+      - langchain-community>=0.4.2
+      - langchain-deepseek>=1.1.0
+      - langchain-mcp-adapters>=0.3.0
+
+      # DeepSeek / OpenAI 兼容接口
+      - openai>=2.45.0
+
+      # MCP 服务
+      - mcp>=1.28.1
+
+      # Streamlit 前端
+      - streamlit>=1.59.2
+      - pygwalker>=0.5.0

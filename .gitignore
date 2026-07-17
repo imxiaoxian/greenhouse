@@ -1,0 +1,42 @@
+﻿# 环境变量
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+
+# Conda 环境（项目内 prefix 模式）：.conda-env/
+.conda-cache/
+
+# Streamlit
+.streamlit/
+
+# 运行时生成的 CSV / JSON
+data/weather_forecast.csv
+data/realtime_weather.csv
+data/memos.json
+data/all_climate.csv
+data/sensor_data.xlsx
+data/sensor_data_today.xlsx
+
+# IDE
+.idea/
+.vscode/
+
+# 日志
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Conda environment (local)
+.conda-env/
