@@ -40,3 +40,6 @@ Thumbs.db
 
 # Conda environment (local)
 .conda-env/
+
+# BGE model files (download from HuggingFace)
+data/bge_model/
